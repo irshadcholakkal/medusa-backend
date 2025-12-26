@@ -29,5 +29,27 @@ export default defineConfig({
       adminCors: process.env.ADMIN_CORS??'',
       authCors: process.env.AUTH_CORS??'',
     },
+    workerMode: process.env.MEDUSA_WORKER_MODE as
+      | "shared"
+      | "server"
+      | "worker",
+      
+    
   },
+ 
 })
+
+
+// import { defineConfig } from "@medusajs/framework/utils"
+
+// export default defineConfig({
+//   projectConfig: {
+//     databaseUrl: process.env.DATABASE_URL,
+//     databasePool: {
+//       min: 1,
+//       max: 3
+//     },
+    
+//     redisUrl: process.env.REDIS_URL,
+//   },
+// })
